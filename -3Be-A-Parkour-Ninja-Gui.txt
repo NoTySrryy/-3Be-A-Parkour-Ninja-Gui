@@ -66,9 +66,10 @@ Fly.TextSize = 20.000
 OpenClose.Name = "Open/Close"
 OpenClose.Parent = Bar
 OpenClose.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+OpenClose.BackgroundTransparency = 1.000
 OpenClose.BorderColor3 = Color3.fromRGB(65, 65, 65)
 OpenClose.BorderSizePixel = 0
-OpenClose.Position = UDim2.new(0.918032765, 0, -0.00880615227, 0)
+OpenClose.Position = UDim2.new(0.914699316, 0, 0, 0)
 OpenClose.Size = UDim2.new(0, 25, 0, 25)
 OpenClose.Font = Enum.Font.Code
 OpenClose.Text = "-"
@@ -107,7 +108,7 @@ Credit.TextWrapped = true
 
 -- Scripts:
 
-local function LQVWNCU_fake_script() -- Bar.Drag 
+local function HFDBNQ_fake_script() -- Bar.Drag 
 	local script = Instance.new('LocalScript', Bar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -150,8 +151,8 @@ local function LQVWNCU_fake_script() -- Bar.Drag
 		end
 	end)
 end
-coroutine.wrap(LQVWNCU_fake_script)()
-local function BUXVC_fake_script() -- BiggerHitBox.LocalScript 
+coroutine.wrap(HFDBNQ_fake_script)()
+local function CYQU_fake_script() -- BiggerHitBox.LocalScript 
 	local script = Instance.new('LocalScript', BiggerHitBox)
 
 	local player = game.Players.LocalPlayer
@@ -213,8 +214,8 @@ local function BUXVC_fake_script() -- BiggerHitBox.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BUXVC_fake_script)()
-local function QCRE_fake_script() -- InfJump.LocalScript 
+coroutine.wrap(CYQU_fake_script)()
+local function KSFAMMS_fake_script() -- InfJump.LocalScript 
 	local script = Instance.new('LocalScript', InfJump)
 
 	local UIS = game:GetService("UserInputService")
@@ -266,8 +267,8 @@ local function QCRE_fake_script() -- InfJump.LocalScript
 	player.CharacterAdded:connect(characterAdded)
 	UIS.JumpRequest:connect(onJumpRequest)
 end
-coroutine.wrap(QCRE_fake_script)()
-local function XDYVWAK_fake_script() -- Fly.LocalScript 
+coroutine.wrap(KSFAMMS_fake_script)()
+local function ZDGJ_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -275,12 +276,12 @@ local function XDYVWAK_fake_script() -- Fly.LocalScript
 		loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
 	end)
 end
-coroutine.wrap(XDYVWAK_fake_script)()
-local function VFZJ_fake_script() -- OpenClose.LocalScript 
+coroutine.wrap(ZDGJ_fake_script)()
+local function VYOMN_fake_script() -- OpenClose.LocalScript 
 	local script = Instance.new('LocalScript', OpenClose)
 
 	script.Parent.MouseButton1Click:connect(function()
 	 script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
 	end)
 end
-coroutine.wrap(VFZJ_fake_script)()
+coroutine.wrap(VYOMN_fake_script)()
