@@ -121,7 +121,7 @@ OpenClose.TextWrapped = true
 
 -- Scripts:
 
-local function OHKLOHO_fake_script() -- Bar.Drag 
+local function BPSOTM_fake_script() -- Bar.Drag 
 	local script = Instance.new('LocalScript', Bar)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -164,8 +164,8 @@ local function OHKLOHO_fake_script() -- Bar.Drag
 		end
 	end)
 end
-coroutine.wrap(OHKLOHO_fake_script)()
-local function XQAGG_fake_script() -- Fly.LocalScript 
+coroutine.wrap(BPSOTM_fake_script)()
+local function LUKOY_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -173,8 +173,8 @@ local function XQAGG_fake_script() -- Fly.LocalScript
 		loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
 	end)
 end
-coroutine.wrap(XQAGG_fake_script)()
-local function XRFYUGN_fake_script() -- InfJump.LocalScript 
+coroutine.wrap(LUKOY_fake_script)()
+local function HGSLE_fake_script() -- InfJump.LocalScript 
 	local script = Instance.new('LocalScript', InfJump)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -183,39 +183,61 @@ local function XRFYUGN_fake_script() -- InfJump.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(XRFYUGN_fake_script)()
-local function EDGBN_fake_script() -- BiggerHitBox.LocalScript 
+coroutine.wrap(HGSLE_fake_script)()
+local function TDYHM_fake_script() -- BiggerHitBox.LocalScript 
 	local script = Instance.new('LocalScript', BiggerHitBox)
 
-	local player = game.Players.LocalPlayer
-	local mouse = player:GetMouse()
+	script.Parent.MouseButton1Click:connect(function()
+		local player = game.Players.LocalPlayer
+		local mouse = player:GetMouse()
 	
-	-- Settings
+		-- Settings
 	
-	bind = ""
-	bind2 = "w"
-	bind3 = "p"
+		bind = ""
+		bind2 = "w"
+		bind3 = "p"
 	
-	-- Script
+		-- Script
 	
-	mouse.KeyDown:connect(function(key)
-		if key == bind then
-			player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
-		end
-	end)
+		mouse.KeyDown:connect(function(key)
+			if key == bind then
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+			end
+		end)
 	
-	mouse.KeyDown:connect(function(key2)
-		if key2 == bind2 then
-			_G.HeadSize = 30
-			_G.Disabled = true
+		mouse.KeyDown:connect(function(key2)
+			if key2 == bind2 then
+				_G.HeadSize = 30
+				_G.Disabled = true
 	
 	
-			if _G.Disabled then
+				if _G.Disabled then
+					for i,v in next, game:GetService('Players'):GetPlayers() do
+						if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+							pcall(function()
+								v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+								v.Character.HumanoidRootPart.Transparency = 0.7
+								v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Blue")
+								v.Character.HumanoidRootPart.Material = "Ice"
+								v.Character.HumanoidRootPart.CanCollide = false
+							end)
+						end
+					end
+				end
+			end
+		end)
+	
+		mouse.KeyDown:connect(function(key3)
+			if key3 == bind3 then
+				_G.HeadSize = 30
+				_G.Disabled = true
+	
+	
 				for i,v in next, game:GetService('Players'):GetPlayers() do
 					if v.Name ~= game:GetService('Players').LocalPlayer.Name then
 						pcall(function()
-							v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-							v.Character.HumanoidRootPart.Transparency = 0.7
+							v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
+							v.Character.HumanoidRootPart.Transparency = 1
 							v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Blue")
 							v.Character.HumanoidRootPart.Material = "Ice"
 							v.Character.HumanoidRootPart.CanCollide = false
@@ -223,31 +245,11 @@ local function EDGBN_fake_script() -- BiggerHitBox.LocalScript
 					end
 				end
 			end
-		end
-	end)
-	
-	mouse.KeyDown:connect(function(key3)
-		if key3 == bind3 then
-			_G.HeadSize = 30
-			_G.Disabled = true
-	
-	
-			for i,v in next, game:GetService('Players'):GetPlayers() do
-				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-					pcall(function()
-						v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
-						v.Character.HumanoidRootPart.Transparency = 1
-						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Blue")
-						v.Character.HumanoidRootPart.Material = "Ice"
-						v.Character.HumanoidRootPart.CanCollide = false
-					end)
-				end
-			end
-		end
+		end)
 	end)
 end
-coroutine.wrap(EDGBN_fake_script)()
-local function XCUQAI_fake_script() -- KillAll.LocalScript 
+coroutine.wrap(TDYHM_fake_script)()
+local function MCQTNVH_fake_script() -- KillAll.LocalScript 
 	local script = Instance.new('LocalScript', KillAll)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -259,13 +261,13 @@ local function XCUQAI_fake_script() -- KillAll.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XCUQAI_fake_script)()
-local function AKXPQU_fake_script() -- OpenClose.LocalScript 
+coroutine.wrap(MCQTNVH_fake_script)()
+local function TNQOCXL_fake_script() -- OpenClose.LocalScript 
 	local script = Instance.new('LocalScript', OpenClose)
 
 	script.Parent.MouseButton1Click:connect(function()
 	 script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
 	end)
 end
-coroutine.wrap(AKXPQU_fake_script)()
+coroutine.wrap(TNQOCXL_fake_script)()
 
